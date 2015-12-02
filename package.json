@@ -2,7 +2,7 @@
   "name": "headphones",
   "version": "1.0.0",
   "description": "",
-  "main": "Headphones.js",
+  "main": "headphones.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/rembo10/headphones-v2.git"
   },
-  "author": "",
+  "author": "rembo10",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/rembo10/headphones-v2/issues"
   },
-  "homepage": "https://github.com/rembo10/headphones-v2#readme"
+  "homepage": "https://github.com/rembo10/headphones-v2#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1-rc1"
+  }
 }
