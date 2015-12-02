@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/rembo10/headphones-v2#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "colors": "^1.1.2",
+    "express": "^4.13.3",
+    "printf": "^0.2.3",
+    "winston": "^2.1.1"
   },
   "devDependencies": {
     "jshint": "^2.9.1-rc1"
