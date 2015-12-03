@@ -53,7 +53,7 @@ function main(argv) {
   env.argv = argv;
   env.dirName = __dirname;
 
-  env.dataDir = env.argv.datadir || getDataDir(process.platform);
+  env.dataDir = env.argv.dataDir || getDataDir(process.platform);
 
   try {
     mkdirp.sync(env.dataDir);
@@ -63,7 +63,7 @@ function main(argv) {
   }
 
   var configPath = env.argv.config || path.join(env.dataDir, 'settings.json');
-  env.config = readConfig(configPath);
+  env.config = readConfig(configPath) || {};
 
   logger.initialize();
   loader.load();
