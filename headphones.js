@@ -66,13 +66,17 @@ function main(argv) {
   env.config = readConfig(configPath) || {};
 
   logger.initialize();
-  loader.load();
-}
+  var log = require('winston');
 
-process.on('SIGINT', function() {
-  writeConfig();
-  process.exit(0);
-});
+  loader.load();
+
+  process.on('SIGINT', function() {
+    log.info('Shutting down');
+    events.emit('main.shutdown');
+    writeConfig();
+    process.exit(0);
+  });
+}
 
 if (require.main === module) {
   var argv = parseArgs(process.argv);
